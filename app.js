@@ -10,7 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 const cityRouter = require('./routes/city');
-//const countryRouter = require('./routes/country');
+const countryRouter = require('./routes/country');
 
 var app = express();
 
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/world/city',cityRouter);
-//app.use('/world/country',countryRouter);
+app.use('/world/country',countryRouter);
 
 
 // catch 404 and forward to error handler

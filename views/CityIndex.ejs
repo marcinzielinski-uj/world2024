@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <table>
+      <tbody>
+      <% cities.forEach((row) => { %>
+      <tr>
+        <td><%=row.ID %></td> <td><%=row.Name %></td>
+        <td><a href="/world/country/<%=row.CountryCode %>"><%=row.CountryCode %></a></td>
+      </tr>
+      <% }); %>
+      </tbody>
+    </table>
+
+
+
+  </body>
+</html>

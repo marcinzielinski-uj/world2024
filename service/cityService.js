@@ -1,5 +1,5 @@
 /*
-    City service
+    City Service
  */
 
 const cityModel = require('../dal/cityModel');
@@ -7,12 +7,15 @@ const cityModel = require('../dal/cityModel');
 const AllCities = async () => {
     const city = await cityModel.selectAllCities();
     return city;
-    //const t = { title: 'City xxx test test tes ' };
-    //return t;
-
 };
 
+const ByCityId = async(ID) => {
+    const city = await cityModel.selectCityId(ID);
+    return city;
+}
 
 module.exports = {
-    AllCities
+    AllCities,
+    ByCityId
+
 }
